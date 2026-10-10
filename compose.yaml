@@ -1,0 +1,49 @@
+name: wordcraft
+
+x-daemonless:
+  title: "WordCraft"
+  icon: ":material-file-document-edit:"
+  category: "Productivity"
+  description: "Open-source, clean-room reimplementation of Microsoft Word in Rust, served as a WebAssembly web app on FreeBSD."
+  upstream_url: "https://github.com/storytold/wordcraft"
+  web_url: "https://getartcraft.com/apps/wordcraft"
+  freshports_url: ""
+  user: "bsd"
+  mlock: false
+  upstream_binary: true
+  appjail: true
+  community: "Discord:https://discord.gg/Kb9tkhecZT"
+
+  docs:
+    env:
+      PUID: "User ID for the nginx worker processes"
+      PGID: "Group ID for the nginx worker processes"
+      TZ: "Timezone for the container"
+    ports:
+      80: "Web UI (the editor runs in the browser; files open and save on the visitor's device)"
+
+  readme:
+    setup: |-
+      **Everything runs in the browser.** WordCraft is Rust compiled to WebAssembly; the container only serves static files. Files open through the browser's file picker and save as downloads, and nothing is stored server side, so there are no volumes.
+
+      **Your work lives in the browser, not on the server.** Preferences and any in-app library or cache belong to the browser profile that opened the app, per origin. Clearing site data, switching browsers, or reaching the app under a different hostname means starting empty. Export what you want to keep; the exported files are the backup, as with any desktop app.
+
+      **Fonts.** The browser build ships with only two fonts. WordCraft also lists the Japanese, Chinese and Arabic families from [craft-fonts](https://github.com/storytold/craft-fonts), which this image serves alongside the app; a family is downloaded the first time you pick it or open a document that uses it.
+
+      **HTTPS.** WebGPU and the clipboard need a secure context. Over plain HTTP the app falls back to WebGL2; put it behind your reverse proxy for the full experience.
+
+services:
+  wordcraft:
+    image: ghcr.io/daemonless/wordcraft:latest
+    container_name: wordcraft
+    # "always", not "unless-stopped": FreeBSD's podman rc.d only auto-starts
+    # containers with restart-policy=always at boot (needs podman_enable=YES).
+    restart: always
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+
+    ports:
+      - "8087:80"
