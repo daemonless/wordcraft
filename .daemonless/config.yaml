@@ -12,5 +12,6 @@ build:
       containerfile: Containerfile
 
 cit:
-  mode: screenshot
+  mode: health
   port: 80
+  health: /
