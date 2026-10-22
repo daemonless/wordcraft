@@ -15,3 +15,5 @@ cit:
   mode: health
   port: 80
   health: /
+  # nginx prints nothing at start; /init's exec line means it is up.
+  ready: "\\[init\\] Executing"
