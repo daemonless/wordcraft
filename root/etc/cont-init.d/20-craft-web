@@ -1,6 +1,0 @@
-#!/bin/sh
-# nginx master runs as root; pre-create the logs so it appends to bsd-owned files (PUID check)
-mkdir -p /var/log/nginx
-: > /var/log/nginx/access.log
-: > /var/log/nginx/error.log
-chown -R bsd:bsd /var/log/nginx /usr/local/www/app
