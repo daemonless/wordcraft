@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-31T08:25:17Z",
+  "generated": "2026-11-01T22:44:49Z",
   "image": "wordcraft",
   "tags": {
     "latest-amd64": {
-      "app_version": "0.13.2",
+      "app_version": "0.14.0",
       "arch": "amd64",
-      "generated": "2026-10-31T08:23:46Z",
+      "generated": "2026-11-01T22:44:06Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -189,7 +189,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -266,7 +266,7 @@
               "BSD2CLAUSE"
             ],
             "name": "nginx",
-            "version": "1.30.6_6,3"
+            "version": "1.30.6_7,3"
           },
           {
             "licenses": [
