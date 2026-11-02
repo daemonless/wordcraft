@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-31T08:55:51Z",
+  "generated": "2026-11-02T00:03:57Z",
   "image": "wordcraft",
   "tags": {
     "latest-aarch64": {
-      "app_version": "0.13.2",
+      "app_version": "0.14.0",
       "arch": "aarch64",
-      "generated": "2026-10-31T08:55:19Z",
+      "generated": "2026-11-02T00:03:23Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -189,7 +189,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
