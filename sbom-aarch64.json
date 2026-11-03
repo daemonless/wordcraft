@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-02T00:03:57Z",
+  "generated": "2026-11-03T10:33:59Z",
   "image": "wordcraft",
   "tags": {
     "latest-aarch64": {
-      "app_version": "0.14.0",
+      "app_version": "0.15.0",
       "arch": "aarch64",
-      "generated": "2026-11-02T00:03:23Z",
+      "generated": "2026-11-03T10:33:20Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -252,7 +252,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
