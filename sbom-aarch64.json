@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-07T08:45:03Z",
+  "generated": "2026-11-09T23:32:34Z",
   "image": "wordcraft",
   "tags": {
     "latest-aarch64": {
-      "app_version": "0.16.0",
+      "app_version": "0.17.0",
       "arch": "aarch64",
-      "generated": "2026-11-07T08:44:18Z",
+      "generated": "2026-11-09T23:31:53Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -266,7 +266,7 @@
               "BSD2CLAUSE"
             ],
             "name": "nginx",
-            "version": "1.30.6_6,3"
+            "version": "1.30.6_10,3"
           },
           {
             "licenses": [
