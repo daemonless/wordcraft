@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-11T23:38:38Z",
+  "generated": "2026-11-12T09:08:33Z",
   "image": "wordcraft",
   "tags": {
     "latest-aarch64": {
-      "app_version": "0.18.0",
+      "app_version": "0.18.1",
       "arch": "aarch64",
-      "generated": "2026-11-11T23:37:56Z",
+      "generated": "2026-11-12T09:07:51Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
